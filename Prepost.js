@@ -44,6 +44,10 @@ app.route('/getmytext').get(cors(),function(req,res) {
     return myText;
 });
 
+app.route('/').get(cors(), function(req,res) {
+    res.send("<h1>Please provide arguemnt</h1>")
+})
+
 var server = app.listen(3000,function(){
     console.log("Server started");
 });
